@@ -47,7 +47,15 @@ if st.session_state.run_simulation:
 
         # Get the Ticker object for the stock
         stock = yf.Ticker(stock_symbol)
-        stock_price = stock.history(period='1d')['Close'].iloc[-1]
+
+
+        stock_price_data = stock.history(period='5d')
+
+        # Check if the DataFrame is empty
+        if stock_price_data.empty:
+            st.error(f"No data available for {stock_symbol}.")
+
+        stock_price = stock.history(period='5d')['Close'].iloc[-1]
 
         # Fetch the available expiration dates from yfinance
         expiration_dates = stock.options
