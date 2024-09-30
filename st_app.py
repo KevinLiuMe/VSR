@@ -13,7 +13,6 @@ from scipy.interpolate import SmoothBivariateSpline
 import os
 
 st. set_page_config(
-    page_title="Ex-stream-ly Cool App",
     layout="wide")
 
 # Initialize session state for tracking if the simulation has been run
