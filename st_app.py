@@ -12,13 +12,9 @@ from scipy.ndimage import gaussian_filter
 from scipy.interpolate import SmoothBivariateSpline
 import os
 
-# Get the port from the environment variable (Heroku sets it automatically)
-port = os.getenv('PORT')
-
-# Check if Heroku provided a port and set it for Streamlit
-st.set_option("server.port", int(port))  # Convert the port to an integer
-
-st. set_page_config(layout="wide")
+st. set_page_config(
+    page_title="Ex-stream-ly Cool App",
+    layout="wide")
 
 # Initialize session state for tracking if the simulation has been run
 if 'run_simulation' not in st.session_state:
