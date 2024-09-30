@@ -10,6 +10,14 @@ import plotly.graph_objects as go
 from scipy.interpolate import griddata
 from scipy.ndimage import gaussian_filter
 from scipy.interpolate import SmoothBivariateSpline
+import os
+
+# Get the port from the environment variable (Heroku sets it automatically)
+port = os.getenv('PORT')
+
+# Check if Heroku provided a port and set it for Streamlit
+if port:
+    st._config.set_option("server.port", port)
 
 st. set_page_config(layout="wide")
 
