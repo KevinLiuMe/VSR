@@ -16,8 +16,7 @@ import os
 port = os.getenv('PORT')
 
 # Check if Heroku provided a port and set it for Streamlit
-if port:
-    st._config.set_option("server.port", port)
+st.set_option("server.port", int(port))  # Convert the port to an integer
 
 st. set_page_config(layout="wide")
 
