@@ -7,4 +7,4 @@ yfinance
 arch
 plotly
 scipy
-sklearn
+scikit-learn
