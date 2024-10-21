@@ -34,7 +34,7 @@ if not st.session_state.run_simulation:
 
     with col2:
         with st.form(key='stock_form'):
-            stock_symbol = st.text_input('Stock Symbol', 'AAPL')
+            stock_symbol = st.text_input('Stock Symbol', 'MSFT')
             submit_button = st.form_submit_button(label='Run Simulation')
             
             if submit_button:
